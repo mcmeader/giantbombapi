@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainConstraintLayout">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="722dp"
+            android:layout_height="437dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.501">
+        <TextView
+                android:text="@string/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signupPassword"
+                app:layout_constraintEnd_toStartOf="@+id/newPassword"
+                android:layout_marginEnd="8dp" android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/signupUsername" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/newPassword" app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="200dp" app:layout_constraintHorizontal_bias="0.0"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signupUsername"
+                android:text="@string/user_name"
+                app:layout_constraintEnd_toStartOf="@+id/newUser" android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toBottomOf="@+id/newUser" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="200dp"
+                android:layout_marginTop="247dp" app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/createUser"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newPassword"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/create_user" android:layout_marginTop="16dp" android:layout_marginBottom="16dp"
+                app:layout_constraintHorizontal_bias="0.5"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/newPassword"
+                android:hint="@string/password_hint"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/signupPassword"
+                app:layout_constraintTop_toBottomOf="@+id/newUser"
+                app:layout_constraintBottom_toTopOf="@+id/createUser" android:layout_marginStart="30dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/newUser"
+                android:hint="@string/username_hint"
+                app:layout_constraintStart_toStartOf="@+id/newPassword" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/profilePicButton2" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="240dp"
+                app:layout_constraintBottom_toTopOf="@+id/newPassword"
+                app:layout_constraintVertical_chainStyle="packed" android:layout_marginBottom="24dp"
+                app:layout_constraintStart_toEndOf="@+id/signupUsername" app:layout_constraintHorizontal_bias="0.5"/>
+        <ImageButton
+                android:layout_width="153dp"
+                android:layout_height="122dp" app:srcCompat="@drawable/blank_profile_pic"
+                android:id="@+id/profilePicButton2"
+                android:cropToPadding="false" android:adjustViewBounds="false" android:scaleType="centerInside"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.075"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,12 @@
+[
+  {
+    "username": "username",
+    "password": "password",
+    "tokenKey": "c05207859a52490a8539a16ce324221d"
+  },
+  {
+    "username": "test",
+    "password": "1234",
+    "tokenKey": "c2b985fe9b4a44e99f36d2fdacdd440a"
+  }
+]

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="252dp"
+            android:layout_height="155dp" app:srcCompat="@drawable/giant_bomb_logo"
+            android:id="@+id/giantBombLogo" android:layout_marginEnd="77dp"
+            app:layout_constraintEnd_toEndOf="@+id/splashTitle" app:layout_constraintStart_toStartOf="@+id/splashTitle"
+            android:layout_marginStart="77dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/splashTitle" app:layout_constraintVertical_bias="1.0"
+    />
+    <TextView
+            android:text="Powered By"
+            android:layout_width="81dp"
+            android:layout_height="22dp"
+            android:id="@+id/acknowledgement"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light" android:textSize="10sp" android:textStyle="bold"
+            android:textScaleX="1.2"
+            app:layout_constraintStart_toStartOf="@+id/giantBombLogo"
+            app:layout_constraintBottom_toTopOf="@+id/giantBombLogo"/>
+    <TextView
+            android:text="Video Game                     Database Search"
+            android:layout_width="366dp"
+            android:layout_height="105dp"
+            android:id="@+id/splashTitle"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light" android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" app:layout_constraintHorizontal_bias="0.498"
+            android:layout_marginBottom="75dp" app:layout_constraintBottom_toTopOf="@+id/giantBombLogo"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="50dp"/>
+</android.support.constraint.ConstraintLayout>
