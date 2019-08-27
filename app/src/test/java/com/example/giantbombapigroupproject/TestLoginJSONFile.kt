@@ -37,7 +37,7 @@ class TestLoginJSONFile {
     @Test
     fun testReadFile() {
         val mockUserData = UserData(FileInputStream(testFile),contextMock)
-        val mockMainClass = Mockito.mock(JSONFile.FileHandler(mockUserData,"")::class.java)
+        val mockMainClass = Mockito.mock(JSONManager.FileHandler(mockUserData,"")::class.java)
         val a = FileInputStream(File("C:\\Users\\mmeader\\AndroidStudioProjects\\Timefighter\\GiantBombAPIGroupProject\\app\\src\\test\\resources\\mockJSONFile.txt"))
         //val loadMockJSONFile = javaClass.getResourceAsStream("mockJSONFile.txt")
         print(mockMainClass.readFile())

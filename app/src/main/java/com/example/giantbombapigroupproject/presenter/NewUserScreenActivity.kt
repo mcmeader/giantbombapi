@@ -12,7 +12,7 @@ class NewUserScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.new_user_signup_activity)
+        setContentView(R.layout.new_user_screen_activity)
         val saveUser = findViewById<Button>(R.id.createUser)
         var newUserModel: NewUserManager
 

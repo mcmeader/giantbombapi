@@ -1,14 +1,13 @@
 package com.example.giantbombapigroupproject.feature.loginfeatures.newuser
 
-import com.example.giantbombapigroupproject.enum_singleton.LoginResult
 import com.example.giantbombapigroupproject.enum_singleton.UserData
-import com.example.giantbombapigroupproject.logic.loginlogic.jsonreadwrite.JSONFile
-import com.example.giantbombapigroupproject.logic.LoginDecisionHandler
+import com.example.giantbombapigroupproject.logic.loginlogic.jsonreadwrite.JSONManager
+import com.example.giantbombapigroupproject.logic.loginlogic.loginmessage.DisplayLoginResultMessage
 
 class NewUserManager{
 
     fun begin(userData: UserData){
-        JSONFile(userData).writeFile()
-        LoginDecisionHandler(userData)
+        JSONManager(userData).writeFile()
+        DisplayLoginResultMessage(userData)
     }
 }

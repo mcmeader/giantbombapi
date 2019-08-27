@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" android:visibility="visible" android:layout_margin="8dp"
+              android:background="@color/colorBackground">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    app:layout_constraintEnd_toStartOf="@+id/info"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/alert_dark_frame" android:cropToPadding="false"
+                    android:scaleType="fitXY"
+                    android:background="#000000"
+                    android:padding="1dp" android:layout_margin="5dp"/>
+            <TextView
+                    android:text="title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:id="@+id/title"
+                    android:textAlignment="center" android:layout_marginLeft="5dp" android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="4dp" android:layout_weight="1" android:textSize="24sp"
+                    android:textStyle="bold|italic" android:layout_marginTop="15dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+        <View
+                android:layout_height="1dp" android:id="@+id/margin" android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"
+        />
+        <TextView
+                android:text="info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/info"
+                android:contentDescription="@android:string/dialog_alert_title" android:textAlignment="center"
+                android:layout_weight="10" android:layout_marginLeft="5dp" android:layout_marginEnd="5dp"
+                android:layout_marginTop="4dp" android:layout_marginBottom="10dp"
+                android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:id="@+id/margin2" android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"/>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.giantbombapigroupproject.presenter
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.giantbombapigroupproject.R
@@ -10,15 +11,17 @@ import java.util.*
 import kotlin.concurrent.schedule
 
 class SplashScreen: AppCompatActivity() {
-    lateinit var context:Context
+    private lateinit var context:Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen)
         context = this
 
+        //TODO: Clean this up and make conform to presenter coordinator
         Timer("SettingUp", false).schedule(2000) {
-           ActivityCoordinator(LoginScreenActivity(), UserData(context))
+            val goToLogin = Intent(context, LoginScreenActivity::class.java)
+            startActivity(goToLogin)
         }
     }
 }

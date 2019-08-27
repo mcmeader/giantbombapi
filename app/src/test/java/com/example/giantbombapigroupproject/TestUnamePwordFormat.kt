@@ -1,12 +1,6 @@
 package com.example.giantbombapigroupproject
 
 import org.junit.Test
-import android.text.InputType
-import android.widget.EditText
-import com.example.giantbombapigroupproject.presenter.LoginScreenActivity
-import com.nhaarman.mockito_kotlin.mock
-import org.junit.Before
-import org.mockito.Mockito
 
 //TODO: Make this work Properly
 class TestUnamePwordFormat {

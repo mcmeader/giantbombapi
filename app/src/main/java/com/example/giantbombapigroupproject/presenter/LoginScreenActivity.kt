@@ -7,11 +7,12 @@ import android.widget.Button
 import android.widget.EditText
 import com.example.giantbombapigroupproject.R
 import com.example.giantbombapigroupproject.enum_singleton.UserData
-import com.example.giantbombapigroupproject.feature.loginfeatures.LoginManager
-import com.example.giantbombapigroupproject.feature.loginfeatures.presentercoordinator.ActivityCoordinator
+import com.example.giantbombapigroupproject.feature.loginfeatures.loginmanager.LoginManager
+import com.example.giantbombapigroupproject.feature.loginfeatures.presentercoordinator.navigate
+import com.example.giantbombapigroupproject.presenter.mainactivity.MainActivity
 
 class LoginScreenActivity : AppCompatActivity() {
-    lateinit var context: Context
+    private lateinit var context: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,10 @@ class LoginScreenActivity : AppCompatActivity() {
         context = this
         var loginModel: LoginManager
 
+
         login.setOnClickListener {
+            this.navigate(MainActivity(),UserData(this))
+            /*
             val(username,password) = Pair(findViewById<EditText>(R.id.userName).text.toString(),
                     findViewById<EditText>(R.id.password).text.toString())
             val passData = UserData(this)
@@ -29,10 +33,12 @@ class LoginScreenActivity : AppCompatActivity() {
             passData.password=password
             loginModel = LoginManager()
             loginModel.begin(passData)
+            */
             }
         newUser.setOnClickListener {
-            ActivityCoordinator(NewUserScreenActivity(), UserData(this))
-        }
-
+            this.navigate(NewUserScreenActivity(),UserData(this))
         }
     }
+
+}
+
